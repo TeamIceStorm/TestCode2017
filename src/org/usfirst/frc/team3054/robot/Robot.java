@@ -127,8 +127,8 @@ public class Robot extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
-        tilt_servo.set(x);
- 	   pan_servo.set(y);
+        tilt_servo.set(y);
+ 	   pan_servo.set(x);
         
         
     }
@@ -147,26 +147,26 @@ public class Robot extends IterativeRobot {
        if(r_joy.getRawButton(3))
        {
     	   //tilt_servo.setAngle(x+1);
-    	   x++;
+    	   y++;
        }
        
        if(r_joy.getRawButton(2))
        {
-    	   x--;
+    	   y--;
        }
        
        if(r_joy.getRawButton(4))
        {
-    	   y--;
+    	   x--;
        }
        
        if(r_joy.getRawButton(5))
        {
-    	   y++;
+    	   x++;
        }
        
-       pan_servo.setAngle(y);
-       tilt_servo.setAngle(x);
+       pan_servo.setAngle(x);
+       tilt_servo.setAngle(y);
        
     }
 
